@@ -6,13 +6,13 @@
 #    By: ankadava <ankadava@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/09 10:54:00 by ankadava          #+#    #+#              #
-#    Updated: 2026/11/10 12:31:32 by ankadava         ###   ########.fr        #
+#    Updated: 2026/11/10 15:47:56 by ankadava         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 CC =cc
-CFLAGES = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
 SRC=ft_printf.c \
 	src/ft_putchar_int.c\
@@ -29,7 +29,7 @@ $(NAME):$(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
 %.o:%.c
-	$(CC) $(CFLAGES) -I. -c $< -o $@
+	$(CC) $(CFLAGS) -I. -c $< -o $@
 
 clean:
 	rm -f $(OBJ)
